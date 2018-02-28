@@ -19,16 +19,14 @@ class User {
 			.$this->status;
 	}	
 }
-
+/*
 class UserManager{
-	public static function addUser(User &$user){
-
-	}
 
 	public static function getUserById($id){
 		try{
-			echo "getUserById:";
-			$dbHandler = getDBHandler();
+			echo "getUserById:".$id;
+			//$dbHandler = getDBHandler();
+			
 			$sql = "select * from user as u where u.id= ?;";
 			$stmt = $dbHandler-> prepare($sql);
 			$stmt->bindParam(1,$id);
@@ -46,10 +44,12 @@ class UserManager{
 			}else{
 				throw new Exception( "获得书籍失败:没有找到");
 			}
+			
 		}catch(Exception $e){
 			printf "获取用户信息失败".$e->.getMessage()."</br>";
 			return false;
 		}
 	}
 }
+*/
 ?>
